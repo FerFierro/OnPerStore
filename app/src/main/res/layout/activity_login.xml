@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    android:paddingTop="16dp"
+    android:scrollbars="vertical"
+    tools:context="com.escom.tt2016.onperstore.Login">
+
+    <ScrollView
+        android:id="@+id/scrollView_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <ImageView
+        android:id="@+id/iv_login_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_launcher_onpreson_store"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+        <EditText
+        android:id="@+id/et_login_usuario"
+        android:hint="Introduce tu usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/iv_login_logo"
+        android:layout_toEndOf="@+id/iv_login_usuario"
+        android:layout_marginStart="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp" />
+
+    <ImageView
+        android:id="@+id/iv_login_password"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/ic_password"
+        android:layout_below="@+id/iv_login_usuario"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/et_login_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_below="@+id/et_login_usuario"
+        android:layout_alignStart="@+id/et_login_usuario"
+        android:layout_alignParentRight="true"
+        android:hint="Contraseña" />
+
+    <Button
+        android:id="@+id/btn_iniciar_sesion"
+        android:text="Iniciar sesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_login_password"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_selector"
+        android:stateListAnimator="@null"
+        android:textColor="@android:color/background_light"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tv_olvido_contrasena"
+        android:text="@string/olvido_contrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_iniciar_sesion"
+        android:layout_alignParentStart="true"
+        android:textAlignment="textStart"
+        android:textColorLink="@android:color/holo_blue_light"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_crear_cuenta"
+        android:text="@string/crear_cuenta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textAlignment="textStart"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:drawablePadding="8dp"
+        android:layout_below="@+id/tv_olvido_contrasena" />
+
+        <ImageView
+            android:id="@+id/iv_login_usuario"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/ic_usuario"
+            android:layout_alignBottom="@+id/et_login_usuario"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+   </ScrollView>
+</LinearLayout>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_crear__cuenta"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:scrollbars="vertical"
+    tools:context="com.escom.tt2016.onperstore.Crear_Cuenta">
+
+    <ScrollView
+        android:id="@+id/scrollView_crear_cuenta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/iv_crear_cuenta_usuario"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_usuario"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/et_crear_cuenta_usuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/iv_crear_cuenta_usuario"
+                android:hint="Introduce un usuario"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="8dp" />
+
+            <ImageView
+                android:id="@+id/iv_crear_cuenta_nombre"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_nombre"
+                android:layout_below="@+id/iv_crear_cuenta_usuario"
+                android:layout_toStartOf="@+id/et_crear_cuenta_usuario"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/et_crear_cuenta_nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_alignTop="@+id/iv_crear_cuenta_nombre"
+                android:layout_alignStart="@+id/et_crear_cuenta_usuario"
+                android:layout_alignParentRight="true"
+                android:hint="Nombre(s)" />
+
+            <EditText
+                android:id="@+id/et_crear_cuenta_ap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_alignTop="@+id/iv_crear_cuenta_ap"
+                android:layout_alignStart="@+id/et_crear_cuenta_nombre"
+                android:hint="Apellido Paterno"
+                android:layout_alignParentRight="true" />
+
+            <ImageView
+                android:id="@+id/iv_crear_cuenta_ap"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_descripcion"
+                android:layout_below="@+id/iv_crear_cuenta_nombre"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="16dp" />
+
+            <ImageView
+                android:id="@+id/iv_crear_cuenta_am"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_descripcion"
+                android:layout_below="@+id/iv_crear_cuenta_ap"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/et_crear_cuenta_am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_alignTop="@+id/iv_crear_cuenta_am"
+                android:layout_alignStart="@+id/et_crear_cuenta_ap"
+                android:layout_alignParentRight="true"
+                android:hint="Apellido Materno"
+                android:layout_marginBottom="16dp" />
+
+            <ImageView
+                android:id="@+id/iv_crear_cuenta_telefono"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_launcher_onpreson_store"
+                android:layout_below="@+id/iv_crear_cuenta_am"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/et_crear_cuenta_telefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:layout_centerVertical="true"
+                android:layout_alignStart="@+id/et_crear_cuenta_am"
+                android:hint="Telefono"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/et_crear_cuenta_am" />
+
+            <ImageView
+                android:id="@+id/iv_crear_cuenta_direccion"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_descripcion"
+                android:layout_below="@+id/iv_crear_cuenta_telefono"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/et_crear_cuenta_direccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:layout_alignTop="@+id/iv_crear_cuenta_direccion"
+                android:layout_alignStart="@+id/et_crear_cuenta_telefono"
+                android:layout_alignParentRight="true"
+                android:hint="Dirección ..."
+                android:layout_below="@+id/et_crear_cuenta_telefono" />
+
+            <ImageView
+                android:id="@+id/iv_crear_cuenta_email"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_descripcion"
+                android:layout_below="@+id/iv_crear_cuenta_direccion"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/et_crear_cuenta_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:layout_alignTop="@+id/iv_crear_cuenta_email"
+                android:layout_alignStart="@+id/et_crear_cuenta_direccion"
+                android:layout_alignParentRight="true"
+                android:hint="Correo Electronico"
+                android:layout_below="@+id/et_crear_cuenta_direccion" />
+
+            <ImageView
+                android:id="@+id/iv_crear_cuenta_password"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_password"
+                android:layout_below="@+id/iv_crear_cuenta_email"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/et_crear_cuenta_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:layout_alignTop="@+id/iv_crear_cuenta_password"
+                android:layout_alignStart="@+id/et_crear_cuenta_email"
+                android:layout_alignParentRight="true"
+                android:hint="contraseña" />
+
+            <Button
+                android:id="@+id/btn_registrar_usuario"
+                android:text="Registrar usuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_crear_cuenta_password"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/btn_selector"
+                android:stateListAnimator="@null"
+                android:textColor="@android:color/background_light" />
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

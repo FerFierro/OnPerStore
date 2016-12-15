@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">OnPer Store</string>
+    <string name="olvido_contrasena"><u>Olvidastes tu contraseña ?</u></string>
+    <string name="crear_cuenta"><i>Nuevo en OnPer Store ?\n<b>Crear una cuenta</b></i></string>
 </resources>

@@ -9,7 +9,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:scrollbars="vertical"
     tools:context="com.escom.tt2016.onperstore.MainActivity">
     <ScrollView
         android:id="@+id/scrollView"
@@ -161,7 +160,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_guardar"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/btn_selector"
+                android:stateListAnimator="@null"
                 android:textColor="@android:color/background_light" />
 
             <Button
@@ -175,7 +175,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_eliminar"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/btn_selector"
+                android:stateListAnimator="@null"
                 android:textColor="@android:color/background_light" />
         </LinearLayout>
 
