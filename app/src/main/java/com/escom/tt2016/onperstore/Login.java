@@ -42,7 +42,6 @@ public class Login extends AppCompatActivity {
                 //Toast.makeText(Login.this, url, Toast.LENGTH_SHORT).show();//para mostrar de que los datos se introjeron correctamente y solo para testeo
                 new Login.ValidarDatos().execute(url);
 
-
             }
         });
 

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_crear_cuenta"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context="com.escom.tt2016.onperstore.Crear_Cuenta">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            tools:ignore="ScrollViewSize">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_crear_cuenta_usuario"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        app:srcCompat="@drawable/ic_usuario"
+                        android:id="@+id/iv_crear_cuenta_usuario"
+                        android:layout_height="@dimen/icon_crear_cuenta"
+                        android:layout_width="@dimen/icon_crear_cuenta"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:contentDescription=""
+                        tools:ignore="ContentDescription" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/til_crear_cuenta_usuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="30"
+                        app:errorEnabled="false"
+                        tools:ignore="RtlHardcoded">
+
+                        <EditText
+                            android:id="@+id/et_crear_cuenta_usuario"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="@string/usuario"
+                            android:inputType="text"
+                            android:maxLines="1" />
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_crear_cuenta_nombre"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_crear_cuenta_usuario"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_height="@dimen/icon_crear_cuenta"
+                    android:layout_width="@dimen/icon_crear_cuenta"
+                    app:srcCompat="@drawable/ic_nombre"
+                    android:id="@+id/iv_crear_cuenta_nombre"
+                    android:layout_gravity="center_vertical"
+                    tools:ignore="ContentDescription" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_crear_cuenta_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    app:errorEnabled="false"
+                    tools:ignore="RtlHardcoded">
+
+                    <EditText
+                        android:id="@+id/et_crear_cuenta_nombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/nombre"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_crear_cuenta_ap"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_crear_cuenta_nombre"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_crear_cuenta"
+                    android:layout_height="@dimen/icon_crear_cuenta"
+                    app:srcCompat="@drawable/ic_descripcion"
+                    android:id="@+id/iv_crear_cuenta_ap"
+                    android:layout_gravity="center_vertical"
+                    tools:ignore="ContentDescription" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_crear_cuenta_ap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    app:errorEnabled="false"
+                    tools:ignore="RtlHardcoded">
+
+                    <EditText
+                        android:id="@+id/et_crear_cuenta_ap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Apellido Paterno"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        tools:ignore="HardcodedText" />
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_crear_cuenta_am"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_crear_cuenta_ap">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_crear_cuenta"
+                    android:layout_height="@dimen/icon_crear_cuenta"
+                    app:srcCompat="@drawable/ic_descripcion"
+                    android:id="@+id/iv_crear_cuenta_am"
+                    android:layout_gravity="center_vertical"
+                    tools:ignore="ContentDescription" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_crear_cuenta_am"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    app:errorEnabled="false"
+                    tools:ignore="RtlHardcoded">
+
+                    <EditText
+                        android:id="@+id/et_crear_cuenta_am"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Apellido Materno"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        tools:ignore="HardcodedText" />
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_crear_cuenta_telefono"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_crear_cuenta_am">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_crear_cuenta"
+                    android:layout_height="@dimen/icon_crear_cuenta"
+                    app:srcCompat="@drawable/ic_telefono"
+                    android:id="@+id/iv_crear_cuenta_telefono"
+                    android:layout_gravity="center_vertical"
+                    tools:ignore="ContentDescription" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_crear_cuenta_telefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="10"
+                    android:layout_marginLeft="8dp"
+                    app:errorEnabled="false"
+                    tools:ignore="RtlHardcoded">
+
+                    <EditText
+                        android:id="@+id/et_crear_cuenta_telefono"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/tel_fono"
+                        android:inputType="phone" />
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_crear_cuenta_direccion"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_crear_cuenta_telefono"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_crear_cuenta"
+                    android:layout_height="@dimen/icon_crear_cuenta"
+                    app:srcCompat="@drawable/ic_direccion"
+                    android:id="@+id/iv_crear_cuenta_direccion"
+                    android:layout_gravity="center_vertical"
+                    tools:ignore="ContentDescription" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_crear_cuenta_direccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    app:errorEnabled="false"
+                    tools:ignore="RtlHardcoded">
+
+                    <EditText
+                        android:id="@+id/et_crear_cuenta_direccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/direccion"
+                        android:inputType="textMultiLine" />
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_crear_cuenta_email"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_crear_cuenta_direccion"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_crear_cuenta"
+                    android:layout_height="@dimen/icon_crear_cuenta"
+                    app:srcCompat="@drawable/ic_email"
+                    android:id="@+id/iv_crear_cuenta_email"
+                    android:layout_gravity="center_vertical"
+                    tools:ignore="ContentDescription" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_crear_cuenta_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    app:errorEnabled="false"
+                    tools:ignore="RtlHardcoded">
+
+                    <EditText
+                        android:id="@+id/et_crear_cuenta_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/correo_electronico"
+                        android:inputType="textEmailAddress" />
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_crear_cuenta_password"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_crear_cuenta_email">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_crear_cuenta"
+                    android:layout_height="@dimen/icon_crear_cuenta"
+                    app:srcCompat="@drawable/ic_password"
+                    android:id="@+id/iv_crear_cuenta_password"
+                    android:layout_gravity="center_vertical"
+                    tools:ignore="ContentDescription" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_crear_cuenta_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="8"
+                    android:layout_marginLeft="8dp"
+                    app:errorEnabled="false"
+                    tools:ignore="RtlHardcoded">
+
+                    <EditText
+                        android:id="@+id/et_crear_cuenta_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/contrasena"
+                        android:inputType="textPassword" />
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+
+            <!-- Bottom Bar -->
+            <LinearLayout
+                android:id="@+id/bottom_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/ll_crear_cuenta_password"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_registrar_usuario"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector"
+                    android:stateListAnimator="@null"
+                    android:text="@string/registrar_usuario"
+                    android:textColor="@android:color/white"
+                    tools:ignore="UnusedAttribute" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
