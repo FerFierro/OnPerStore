@@ -45,7 +45,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="8dp"
                         app:counterEnabled="true"
-                        app:counterMaxLength="30"
+                        app:counterMaxLength="15"
                         app:errorEnabled="false"
                         tools:ignore="RtlHardcoded">
 
@@ -238,6 +238,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
+                        android:imeOptions="actionSend"
+                        android:singleLine="true"
                         android:hint="@string/direccion"
                         android:inputType="textMultiLine" />
 
@@ -311,6 +313,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
+                        android:maxLength="8"
                         android:hint="@string/contrasena"
                         android:inputType="textPassword" />
 

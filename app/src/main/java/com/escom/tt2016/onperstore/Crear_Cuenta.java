@@ -67,6 +67,23 @@ public class Crear_Cuenta extends AppCompatActivity {
         // Referencias btn
         btn_registrar_usuario=           (Button)   findViewById(R.id.btn_registrar_usuario);
 
+        et_crear_cuenta_usuario.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                til_crear_cuenta_usuario.setError(null);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
         et_crear_cuenta_nombre.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -76,6 +93,41 @@ public class Crear_Cuenta extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 til_crear_cuenta_nombre.setError(null);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+
+        et_crear_cuenta_ap.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                til_crear_cuenta_ap.setError(null);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        et_crear_cuenta_am.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                til_crear_cuenta_am.setError(null);
             }
 
             @Override
@@ -101,6 +153,23 @@ public class Crear_Cuenta extends AppCompatActivity {
             }
         });
 
+        et_crear_cuenta_direccion.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                til_crear_cuenta_direccion.setError(null);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
         et_crear_cuenta_email.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -110,6 +179,23 @@ public class Crear_Cuenta extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 esCorreoValido(String.valueOf(s));
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        et_crear_cuenta_password.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                til_crear_cuenta_password.setError(null);
             }
 
             @Override
@@ -156,18 +242,35 @@ public class Crear_Cuenta extends AppCompatActivity {
         String email =             til_crear_cuenta_email.getEditText().getText().toString();
         String password =          til_crear_cuenta_password.getEditText().getText().toString();
 
+        boolean a = esUsuarioValido(usuario);
+        boolean b = esNombreValido(nombre);
+        boolean c = esApellidoPaternoValido(ap);
+        boolean d = esApellidoMaternoValido(am);
+        boolean e = esTelefonoValido(telefono);
+        boolean f = esDireccionValido(direccion);
+        boolean g = esCorreoValido(email);
 
-        boolean a = esNombreValido(nombre);
-        boolean b = esTelefonoValido(telefono);
-        boolean c = esCorreoValido(email);
 
-        if (a && b && c) {
+
+        if (a && b && c&&d && e && f && g) {
             // OK, se pasa a la siguiente acción
             Toast.makeText(this, "Se guarda el registro", Toast.LENGTH_LONG).show();
         }
 
     }
 
+
+    private boolean esUsuarioValido(String usuario) {
+        Pattern patron = Pattern.compile("^[a-zA-Z ]+$");
+        if (!patron.matcher(usuario).matches() || usuario.length() >15) {
+            til_crear_cuenta_usuario.setError("Usuario inválido");
+            return false;
+        } else {
+            til_crear_cuenta_usuario.setError(null);
+        }
+
+        return true;
+    }
 
     private boolean esNombreValido(String nombre) {
         Pattern patron = Pattern.compile("^[a-zA-Z ]+$");
@@ -182,12 +285,51 @@ public class Crear_Cuenta extends AppCompatActivity {
     }
 
 
+    private boolean esApellidoPaternoValido(String ap) {
+        Pattern patron = Pattern.compile("^[a-zA-Z ]+$");
+        if (!patron.matcher(ap).matches() || ap.length() > 30) {
+            til_crear_cuenta_ap.setError("Apellido Paterno inválido");
+            return false;
+        } else {
+            til_crear_cuenta_ap.setError(null);
+        }
+
+        return true;
+    }
+
+
+    private boolean esApellidoMaternoValido(String am) {
+        Pattern patron = Pattern.compile("^[a-zA-Z ]+$");
+        if (!patron.matcher(am).matches() || am.length() > 30) {
+            til_crear_cuenta_am.setError("Apellido Materno inválido");
+            return false;
+        } else {
+            til_crear_cuenta_am.setError(null);
+        }
+
+        return true;
+    }
+
+
     private boolean esTelefonoValido(String telefono) {
-        if (!Patterns.PHONE.matcher(telefono).matches()) {
+        if (!Patterns.PHONE.matcher(telefono).matches() || telefono.length() > 10) {
             til_crear_cuenta_telefono.setError("Teléfono inválido");
             return false;
         } else {
             til_crear_cuenta_telefono.setError(null);
+        }
+
+        return true;
+    }
+
+
+    private boolean esDireccionValido(String direccion) {
+        Pattern patron = Pattern.compile("^[a-zA-Z ]+$");
+        if (!patron.matcher(direccion).matches() || direccion.length() > 100) {
+            til_crear_cuenta_direccion.setError("Direccion invalida inválido");
+            return false;
+        } else {
+            til_crear_cuenta_direccion.setError(null);
         }
 
         return true;
