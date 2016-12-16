@@ -18,6 +18,7 @@ import java.util.regex.Pattern;
 
 
 public class Crear_Cuenta extends AppCompatActivity {
+
     EditText et_crear_cuenta_usuario,
              et_crear_cuenta_nombre,
              et_crear_cuenta_ap,
@@ -210,37 +211,22 @@ public class Crear_Cuenta extends AppCompatActivity {
             public void onClick(View view) {
 
                 ValidarDatos();
-
-
-               /* String url="http://192.168.0.3/WebService/28/Crear_cuenta.php?usu=";
-                url=url            +et_crear_cuenta_usuario.getText().toString();
-                url=url+"&name="   +et_crear_cuenta_nombre.getText().toString();
-                url=url+"&ap="     +et_crear_cuenta_ap.getText().toString();
-                url=url+"&am="     +et_crear_cuenta_am.getText().toString();
-                url=url+"&tel="    +et_crear_cuenta_telefono.getText().toString();
-                url=url+"&dir="    +et_crear_cuenta_direccion.getText().toString();
-                url=url+"&email="  +et_crear_cuenta_email.getText().toString();
-                url=url+"&pas="    +et_crear_cuenta_password.getText().toString();
-                //Toast.makeText(Login.this, url, Toast.LENGTH_SHORT).show();//para mostrar de que los datos se introjeron correctamente y solo para testeo
-                new Crear_Cuenta.RegistrarDatosUsuario().execute(url);*/
             }
         });
-
-
 
 
     }//Fin de onCreate
 
 
     private void ValidarDatos() {
-        String usuario =           til_crear_cuenta_usuario.getEditText().getText().toString();
-        String nombre =            til_crear_cuenta_nombre.getEditText().getText().toString();
-        String ap =                til_crear_cuenta_ap.getEditText().getText().toString();
-        String am =                til_crear_cuenta_am.getEditText().getText().toString();
-        String telefono =          til_crear_cuenta_telefono.getEditText().getText().toString();
-        String direccion =         til_crear_cuenta_direccion.getEditText().getText().toString();
-        String email =             til_crear_cuenta_email.getEditText().getText().toString();
-        String password =          til_crear_cuenta_password.getEditText().getText().toString();
+        String usuario =           til_crear_cuenta_usuario.getEditText()      .getText().toString();
+        String nombre =            til_crear_cuenta_nombre.getEditText()       .getText().toString();
+        String ap =                til_crear_cuenta_ap.getEditText()           .getText().toString();
+        String am =                til_crear_cuenta_am.getEditText()           .getText().toString();
+        String telefono =          til_crear_cuenta_telefono.getEditText()     .getText().toString();
+        String direccion =         til_crear_cuenta_direccion.getEditText()    .getText().toString();
+        String email =             til_crear_cuenta_email.getEditText()        .getText().toString();
+        String password =          til_crear_cuenta_password.getEditText()     .getText().toString();
 
         boolean a = esUsuarioValido(usuario);
         boolean b = esNombreValido(nombre);
@@ -252,9 +238,19 @@ public class Crear_Cuenta extends AppCompatActivity {
 
 
 
-        if (a && b && c&&d && e && f && g) {
+        if (a && b && c && d && e && f && g) {
             // OK, se pasa a la siguiente acción
-            Toast.makeText(this, "Se guarda el registro", Toast.LENGTH_LONG).show();
+            String url="http://192.168.0.3/WebService/28/Crear_cuenta.php?usu=";
+                   url=      url            +et_crear_cuenta_usuario.getText().toString();
+                   url=      url+"&name="   +et_crear_cuenta_nombre.getText().toString();
+                   url=      url+"&ap="     +et_crear_cuenta_ap.getText().toString();
+                   url=      url+"&am="     +et_crear_cuenta_am.getText().toString();
+                   url=      url+"&tel="    +et_crear_cuenta_telefono.getText().toString();
+                   url=      url+"&dir="    +et_crear_cuenta_direccion.getText().toString();
+                   url=      url+"&email="  +et_crear_cuenta_email.getText().toString();
+                   url=      url+"&pas="    +et_crear_cuenta_password.getText().toString();
+                //Toast.makeText(Login.this, url, Toast.LENGTH_SHORT).show();//para mostrar de que los datos se introjeron correctamente y solo para testeo
+                new Crear_Cuenta.RegistrarDatosUsuario().execute(url);
         }
 
     }
@@ -326,7 +322,7 @@ public class Crear_Cuenta extends AppCompatActivity {
     private boolean esDireccionValido(String direccion) {
         Pattern patron = Pattern.compile("^[a-zA-Z ]+$");
         if (!patron.matcher(direccion).matches() || direccion.length() > 100) {
-            til_crear_cuenta_direccion.setError("Direccion invalida inválido");
+            til_crear_cuenta_direccion.setError("Dirección invalida");
             return false;
         } else {
             til_crear_cuenta_direccion.setError(null);

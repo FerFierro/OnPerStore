@@ -37,8 +37,8 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String url="http://192.168.0.3/WebService/28/Login.php?usu=";
-                url=url + et_usuario.getText().toString();
-                url=url+"&pas="+et_password.getText().toString();
+                       url=    url+ et_usuario.getText().toString();
+                       url=    url+"&pas="+et_password.getText().toString();
                 //Toast.makeText(Login.this, url, Toast.LENGTH_SHORT).show();//para mostrar de que los datos se introjeron correctamente y solo para testeo
                 new Login.ValidarDatos().execute(url);
 
@@ -89,7 +89,7 @@ public class Login extends AppCompatActivity {
 
             } catch (JSONException e) {
                 e.printStackTrace();
-                Toast.makeText(getApplicationContext(), "Usuario o contrasena incorrectos", Toast.LENGTH_SHORT).show();//para mostrar contenido del JSON para pruebas
+                Toast.makeText(getApplicationContext(), "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();//para mostrar contenido del JSON para pruebas
             }
 
         }

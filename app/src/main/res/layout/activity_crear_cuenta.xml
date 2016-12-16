@@ -128,7 +128,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:hint="Apellido Paterno"
+                        android:hint="@string/ap"
                         android:inputType="text"
                         android:maxLines="1"
                         tools:ignore="HardcodedText" />
@@ -164,7 +164,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:hint="Apellido Materno"
+                        android:hint="@string/am"
                         android:inputType="text"
                         android:maxLines="1"
                         tools:ignore="HardcodedText" />
@@ -203,7 +203,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:hint="@string/tel_fono"
+                        android:hint="@string/telefono"
                         android:inputType="phone" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -241,7 +241,8 @@
                         android:imeOptions="actionSend"
                         android:singleLine="true"
                         android:hint="@string/direccion"
-                        android:inputType="textMultiLine" />
+                        android:inputType="textMultiLine"
+                        tools:ignore="Deprecated" />
 
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>

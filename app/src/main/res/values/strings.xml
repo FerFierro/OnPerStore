@@ -1,12 +1,32 @@
 <resources>
     <string name="app_name">OnPer Store</string>
+    <!--  activity_login -->
+    <string name="btn_iniciar_sesion">Iniciar sesion</string>
     <string name="olvido_contrasena"><u>Olvidastes tu contraseña ?</u></string>
     <string name="crear_cuenta"><i>Nuevo en OnPer Store ?\n<b>Crear una cuenta</b></i></string>
-    <string name="contrasena">Contrasena</string>
-    <string name="correo_electronico">Correo electronico</string>
-    <string name="direccion">Direccion ...</string>
-    <string name="nombre">Nombre</string>
-    <string name="registrar_usuario">Registrar usuario</string>
-    <string name="tel_fono">Teléfono</string>
+
+    <!--  Crear Cuenta -->
     <string name="usuario">Usuario</string>
+    <string name="nombre">Nombre</string>
+    <string name="ap">Apellido Paterno</string>
+    <string name="am">Apellido Materno</string>
+    <string name="telefono">Teléfono</string>
+    <string name="direccion">Dirección ...</string>
+    <string name="correo_electronico">Correo electrónico</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="registrar_usuario">Registrar usuario</string>
+
+
+    <!--  Articulo -->
+    <string name="id">id</string>
+    <string name="categoria">Categoria</string>
+    <string name="descripion">Descripcion ...</string>
+    <string name="cantidad_articulos">Cantidad de Articulos disponibles</string>
+    <string name="precio">Precio</string>
+    <string name="btn_guardar">Guardar</string>
+    <string name="btn_consultar">Consultar</string>
+    <string name="btn_eliminar">Eliminar</string>
+
+
+
 </resources>

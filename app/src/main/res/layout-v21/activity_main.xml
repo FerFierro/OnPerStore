@@ -10,13 +10,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.escom.tt2016.onperstore.MainActivity">
-
-
+    
+    
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:orientation="vertical"
@@ -37,7 +38,8 @@
                 android:id="@+id/iv_id"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                app:srcCompat="@drawable/ic_launcher_onpreson_store" />
+                app:srcCompat="@drawable/ic_launcher_onpreson_store"
+                tools:ignore="ContentDescription" />
 
             <EditText
                 android:id="@+id/et_id"
@@ -57,7 +59,8 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 app:srcCompat="@drawable/ic_categoria"
-                android:id="@+id/iv_categoria"/>
+                android:id="@+id/iv_categoria"
+                tools:ignore="ContentDescription" />
 
             <EditText
                 android:id="@+id/et_categoria"
@@ -72,7 +75,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
+            
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -98,7 +101,8 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 app:srcCompat="@drawable/ic_descripcion"
-                android:id="@+id/iv_descripcion"/>
+                android:id="@+id/iv_descripcion"
+                tools:ignore="ContentDescription" />
 
             <EditText
                 android:id="@+id/et_descripcion"
@@ -121,7 +125,8 @@
                 android:id="@+id/iv_cantidad"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                app:srcCompat="@drawable/ic_cantidad" />
+                app:srcCompat="@drawable/ic_cantidad"
+                tools:ignore="ContentDescription" />
 
 
             <EditText
@@ -142,7 +147,8 @@
                 android:id="@+id/iv_precio"
                 app:srcCompat="@drawable/ic_precio"
                 android:layout_width="40dp"
-                android:layout_height="40dp"/>
+                android:layout_height="40dp"
+                tools:ignore="ContentDescription" />
 
             <EditText
                 android:id="@+id/et_precio"
